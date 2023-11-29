@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC18C\uC694\uC2DC\uAC04:  12\uC2DC\uAC04"
+  m_text: "\uC18C\uC694\uC2DC\uAC04: 12\uC2DC\uAC04"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f4b583c2a92d03429c9a68e18cd4603, type: 2}
   m_sharedMaterial: {fileID: -7149077809279031341, guid: 4f4b583c2a92d03429c9a68e18cd4603, type: 2}
@@ -5677,7 +5677,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1395242329}
-  - component: {fileID: 1395242331}
   m_Layer: 5
   m_Name: Pan_Txt_Coupang
   m_TagString: Untagged
@@ -5707,14 +5706,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1395242331
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395242328}
-  m_CullTransparentMesh: 1
 --- !u!1 &1398036441
 GameObject:
   m_ObjectHideFlags: 0
@@ -7845,8 +7836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
-  m_SizeDelta: {x: -20, y: 40}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1828002125
 MonoBehaviour:
@@ -8879,15 +8870,15 @@ RectTransform:
   - {fileID: 405638456}
   - {fileID: 824126547}
   - {fileID: 2063482212}
+  - {fileID: 1261918667}
+  - {fileID: 344140533}
+  - {fileID: 48230232}
   - {fileID: 1395242329}
   - {fileID: 209378651}
   - {fileID: 935007555}
   - {fileID: 688808954}
   - {fileID: 2044033971}
   - {fileID: 1147898138}
-  - {fileID: 1261918667}
-  - {fileID: 344140533}
-  - {fileID: 48230232}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
