@@ -32,6 +32,11 @@ public class TilteBtnMove : MonoBehaviour
         SceneManager.LoadScene("MainGame");
 	}
 
+    public void GoTitle()
+	{
+        SceneManager.LoadScene("Title");
+	}
+
     public void ExitGame()
 	{
         Application.Quit();
