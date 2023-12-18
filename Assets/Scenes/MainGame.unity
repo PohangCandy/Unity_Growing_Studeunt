@@ -5662,6 +5662,7 @@ GameObject:
   - component: {fileID: 584097183}
   - component: {fileID: 584097182}
   - component: {fileID: 584097181}
+  - component: {fileID: 584097184}
   m_Layer: 5
   m_Name: Btn_allow
   m_TagString: Untagged
@@ -5732,7 +5733,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 584097182}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 584097184}
+        m_TargetAssemblyTypeName: TilteBtnMove, Assembly-CSharp
+        m_MethodName: GoGameScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &584097182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5771,6 +5784,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584097179}
   m_CullTransparentMesh: 1
+--- !u!114 &584097184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584097179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0329877bab02da448ab4dcd4c8c21b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589134250
 GameObject:
   m_ObjectHideFlags: 0
@@ -14417,6 +14442,7 @@ GameObject:
   - component: {fileID: 1280127192}
   - component: {fileID: 1280127191}
   - component: {fileID: 1280127190}
+  - component: {fileID: 1280127193}
   m_Layer: 5
   m_Name: Btn_allow
   m_TagString: Untagged
@@ -14487,7 +14513,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1280127191}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1280127193}
+        m_TargetAssemblyTypeName: TilteBtnMove, Assembly-CSharp
+        m_MethodName: GoGameScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1280127191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14526,6 +14564,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280127188}
   m_CullTransparentMesh: 1
+--- !u!114 &1280127193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280127188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0329877bab02da448ab4dcd4c8c21b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1285343254
 GameObject:
   m_ObjectHideFlags: 0
@@ -17230,6 +17280,7 @@ GameObject:
   - component: {fileID: 1525532181}
   - component: {fileID: 1525532180}
   - component: {fileID: 1525532179}
+  - component: {fileID: 1525532182}
   m_Layer: 5
   m_Name: Btn_allow
   m_TagString: Untagged
@@ -17300,7 +17351,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1525532180}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1525532182}
+        m_TargetAssemblyTypeName: TilteBtnMove, Assembly-CSharp
+        m_MethodName: GoGameScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1525532180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17339,6 +17402,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525532177}
   m_CullTransparentMesh: 1
+--- !u!114 &1525532182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525532177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0329877bab02da448ab4dcd4c8c21b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1528679072
 GameObject:
   m_ObjectHideFlags: 0
@@ -20953,6 +21028,7 @@ GameObject:
   - component: {fileID: 1809930844}
   - component: {fileID: 1809930843}
   - component: {fileID: 1809930842}
+  - component: {fileID: 1809930845}
   m_Layer: 5
   m_Name: Btn_allow
   m_TagString: Untagged
@@ -21023,7 +21099,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1809930843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1809930845}
+        m_TargetAssemblyTypeName: TilteBtnMove, Assembly-CSharp
+        m_MethodName: GoGameScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1809930843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21062,6 +21150,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809930840}
   m_CullTransparentMesh: 1
+--- !u!114 &1809930845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809930840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0329877bab02da448ab4dcd4c8c21b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1820523395
 GameObject:
   m_ObjectHideFlags: 0
