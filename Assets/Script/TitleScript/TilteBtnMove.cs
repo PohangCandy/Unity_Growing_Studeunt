@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class TilteBtnMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GoBooks()
 	{
         SceneManager.LoadScene("Books");
@@ -31,6 +19,16 @@ public class TilteBtnMove : MonoBehaviour
 	{
         SceneManager.LoadScene("MainGame");
 	}
+
+    public void ContinueGame()
+    {
+        if (!DataManager.instance.DataCheck())
+        {
+            return;
+        }
+        SceneManager.LoadScene("MainGame");
+        DataManager.instance.LoadData();
+    }
 
     public void GoTitle()
 	{
