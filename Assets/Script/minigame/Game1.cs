@@ -31,21 +31,25 @@ public class Game1 : MonoBehaviour
     //타이머 오브젝트
     public Slider minigameTimer;
     private bool setgameover = false;
+    public TMP_Text counttext;
 
-
-
+    //결과창 텍스트
     public GameObject resultPanal;
     public TMP_Text timetext;
     public TMP_Text scoretext;
     public TMP_Text ranktext;
 
+    //게임시작전 카운트다운
     public int countdownTime;
     public TMP_Text countdownDisplay;
     bool canPlay = false;
 
+    public GameObject[] heartimage = new GameObject[3];
+
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         StartCoroutine(CountdownToStart());
 
     }
@@ -54,11 +58,16 @@ public class Game1 : MonoBehaviour
     void Update()
     {
 
+        //게임이 실행되면 타이머 시작
         if (canPlay)
         {
             if (minigameTimer.value > 0.0f)
             {
                 minigameTimer.value -= Time.deltaTime;
+
+                //mathf.floor을 써서 소수점 날리고 구현
+                counttext.text = Mathf.Floor(minigameTimer.value).ToString();
+
             }
 
             else
@@ -74,8 +83,7 @@ public class Game1 : MonoBehaviour
         checkdir = true;
         setgameover = false;
         slider.value = 0;
-
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
 		{
             minPos[i] = good[i].anchoredPosition.x;
             maxPos[i] = good[i].sizeDelta.x + minPos[i];
@@ -108,6 +116,7 @@ public class Game1 : MonoBehaviour
             if (checkSpace < 3 && Input.GetKeyDown(KeyCode.Space))
             {
                 //Debug.Log(slider.value);
+                heartimage[checkSpace].SetActive(false);
                 checkSpace++;
             }
 
