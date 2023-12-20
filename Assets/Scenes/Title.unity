@@ -1306,8 +1306,12 @@ MonoBehaviour:
     flex: 0
     social: 0
     conf: 0
-    money: 
-    Day: 0
+    intel: 0
+    money: 0
+    day: 0
+    hour: 0
+    minute: 0
+    stress: 0
 --- !u!1 &1527584877
 GameObject:
   m_ObjectHideFlags: 0

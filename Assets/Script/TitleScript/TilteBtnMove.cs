@@ -22,6 +22,7 @@ public class TilteBtnMove : MonoBehaviour
 
     public void ContinueGame()
     {
+        //불러올 데이터가 있는지 체크하기
         if (!DataManager.instance.DataCheck())
         {
             return;

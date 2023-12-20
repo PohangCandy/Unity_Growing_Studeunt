@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+//미니게임의 정보를 가질 클래스
 public class Game1 : MonoBehaviour
 {
     //슬라이더정보
@@ -38,6 +39,7 @@ public class Game1 : MonoBehaviour
     public TMP_Text timetext;
     public TMP_Text scoretext;
     public TMP_Text ranktext;
+    public TMP_Text stattext;
 
     //게임시작전 카운트다운
     public int countdownTime;
@@ -49,6 +51,7 @@ public class Game1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //게임시작할때 스케일 1로 시작 ,코루틴시작해서 카운트다운이후 게임시작
         Time.timeScale = 1;
         StartCoroutine(CountdownToStart());
 
@@ -140,31 +143,55 @@ public class Game1 : MonoBehaviour
         timetext.text = "남은시간 " + (int)minigameTimer.value +"초";
 		scoretext.text = "획득 포인트 " + checknum + "/3점";
 
+        //게임결과 현재 몇개 체크했는지에 따라 획득 랭크및 스탯증가량이 다름
         switch(checknum)
 		{
             case 0:
                 ranktext.text = "획득랭크 F";
+                stattext.text = "10000원획득";
+                DataManager.instance.nowData.money += 10000;
                 break;
             case 1:
                 ranktext.text = "획득랭크 C";
+                stattext.text = "50000원획득\n자신감,체력 UP";
+                DataManager.instance.nowData.money += 50000;
+                DataManager.instance.nowData.conf += 1;
+                DataManager.instance.nowData.hp += 1;
                 break;
             case 2:
                 ranktext.text = "획득랭크 B";
+                stattext.text = "100000원획득\n자신감,체력 UP";
+                DataManager.instance.nowData.money += 100000;
+                DataManager.instance.nowData.conf += 2;
+                DataManager.instance.nowData.hp += 3;
                 break;
             default:
                 ranktext.text = "획득랭크 A";
+                stattext.text = "200000원획득\n자신감,체력 UP";
+                DataManager.instance.nowData.money += 200000;
+                DataManager.instance.nowData.conf += 3;
+                DataManager.instance.nowData.hp += 5;
                 break;
         }
 
-		Time.timeScale = 0;
+        //공용으로 게임을 플레이하면 스트레스가 쌓인다.
+        DataManager.instance.nowData.stress += 10;
+        //시간을 추가한다.
+        addhourTime(12);
+        //데이터저장
+        DataManager.instance.SaveData();
+        Time.timeScale = 0;
 
     }
-
+    
+    //메인게임메뉴로 돌아가는 버튼
     public void GoMainGame()
     {
+        DataManager.instance.SaveData();
         SceneManager.LoadScene("MainGame");
     }
 
+    //게임을 하기전의 카운트다운
     IEnumerator CountdownToStart()
 	{
         while(countdownTime > 0)
@@ -183,6 +210,20 @@ public class Game1 : MonoBehaviour
         
         yield return new WaitForSeconds(1f);
         countdownDisplay.gameObject.SetActive(false);
+	}
+
+    void addhourTime(int hour)
+	{
+        if (DataManager.instance.nowData.hour + hour > 24)
+		{
+            DataManager.instance.nowData.hour = DataManager.instance.nowData.hour - hour;
+            DataManager.instance.nowData.day++;
+
+        }
+        else
+		{
+            DataManager.instance.nowData.hour += hour;
+        }
 	}
 
 }
