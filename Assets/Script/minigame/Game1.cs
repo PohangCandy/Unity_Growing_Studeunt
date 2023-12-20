@@ -116,7 +116,7 @@ public class Game1 : MonoBehaviour
                 checkdir = false;
 
             //스페이스바 체크
-            if (checkSpace < 3 && Input.GetKeyDown(KeyCode.Space))
+            if (checkSpace < 3 && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
             {
                 //Debug.Log(slider.value);
                 heartimage[checkSpace].SetActive(false);
@@ -126,7 +126,7 @@ public class Game1 : MonoBehaviour
             //스페이스바를 눌렀을경우 핸들이 오브젝트 안에 들어있다면 해당하는 오브젝트 삭제하고 정보초기화
             for (int i = 0; i < 3; i++)
             {
-                if (slider.value >= minPos[i] && slider.value <= maxPos[i] && Input.GetKeyDown(KeyCode.Space))
+                if (slider.value >= minPos[i] && slider.value <= maxPos[i] && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
                 {
                     checknum++;
                     box[i].SetActive(false);

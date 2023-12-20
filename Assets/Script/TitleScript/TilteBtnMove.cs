@@ -48,6 +48,7 @@ public class TilteBtnMove : MonoBehaviour
 
     public void ExitGame()
 	{
+        DataManager.instance.SaveData();
         Application.Quit();
         Debug.Log("EXIT GAME");
 	}
